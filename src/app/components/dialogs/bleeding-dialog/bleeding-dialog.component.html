@@ -1,8 +1,10 @@
 <label>Pick bleeding level</label>
-<mat-radio-group>
-    <mat-radio-button>None</mat-radio-button>
-    <mat-radio-button>Spotting</mat-radio-button>
-    <mat-radio-button>Light</mat-radio-button>
-    <mat-radio-button>Medium</mat-radio-button>
-    <mat-radio-button>Heavy</mat-radio-button>
+<mat-radio-group [(ngModel)]="bleedingLevel">
+    <mat-radio-button class="bleed-radio" value="none">None</mat-radio-button>
+    <mat-radio-button class="bleed-radio" value="spotting">Spotting</mat-radio-button>
+    <mat-radio-button class="bleed-radio" value="light">Light</mat-radio-button>
+    <mat-radio-button class="bleed-radio" value="medium">Medium</mat-radio-button>
+    <mat-radio-button class="bleed-radio" value="heavy">Heavy</mat-radio-button>
 </mat-radio-group>
+<button mat-raised-button color="accent"
+    (click)="saveData()">Ok</button>
