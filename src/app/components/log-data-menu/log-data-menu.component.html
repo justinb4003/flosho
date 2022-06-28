@@ -1,7 +1,9 @@
 &lt;-- Today --&gt;
 <hr />
-<button mat-raised-button color="primary">Bleeding</button>
-<button mat-raised-button color="primary">Temperature</button>
+<button mat-raised-button color="primary"
+    (click)="logBleeding()">Bleeding</button>
+<button mat-raised-button color="primary"
+    (click)="logTemperature()">Temperature</button>
 <button mat-raised-button color="primary">Cervical Mucus</button>
 <button mat-raised-button color="primary">Cervix</button>
 <button mat-raised-button color="primary">Sex</button>
