@@ -1,4 +1,6 @@
+import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
+import { DbService } from './services/db.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'flosho';
+
+  constructor(
+    dbService: DbService,
+  ) {}
+
+  ngOnInit(): void {
+    console.log('init hit');
+  }
 }
