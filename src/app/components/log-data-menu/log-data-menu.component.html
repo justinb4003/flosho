@@ -1,11 +1,78 @@
-&lt;-- Today --&gt;
-<hr />
-<button mat-raised-button color="primary">Bleeding</button>
-<button mat-raised-button color="primary">Temperature</button>
-<button mat-raised-button color="primary">Cervical Mucus</button>
-<button mat-raised-button color="primary">Cervix</button>
-<button mat-raised-button color="primary">Sex</button>
-<button mat-raised-button color="primary">Desire</button>
-<button mat-raised-button color="primary">Pain</button>
-<button mat-raised-button color="primary">Mood</button>
-<button mat-raised-button color="primary">Note</button>
+<div class="menu-container">
+    <div class="menu-container">
+        <button mat-icon-button color="accent"
+            (click)="this.appData.dateBackward()">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        {{ this.logDateKey }}
+        <button mat-icon-button color="accent"
+            (click)="this.appData.dateForward()">
+            <mat-icon>arrow_forward</mat-icon>
+        </button>
+        <hr />
+        <button mat-raised-button color="primary"
+            (click)="this.appData.dateToday()">Today</button>
+    </div>
+    <hr />
+    <mat-card class="logging-card mat-elevation-z8"
+        (click)="logBleeding()">
+        <mat-card-title>
+            Bleeding
+        </mat-card-title>
+        <mat-card-content>
+            <mat-icon>circle</mat-icon>
+            {{ bleedingLevel }}
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="logging-card mat-elevation-z8"
+        (click)="logTemperature()">
+        <mat-card-title>
+            Temperature
+        </mat-card-title>
+        <mat-card-content>
+            <mat-icon>circle</mat-icon>
+            {{ tempLevel }}
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="logging-card mat-elevation-z8"
+        (click)="logTemperature()">
+        <mat-card-title>
+            Pain
+        </mat-card-title>
+        <mat-card-content>
+            <mat-icon>circle</mat-icon>
+            {{ tempLevel }}
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="logging-card mat-elevation-z8"
+        (click)="logTemperature()">
+        <mat-card-title>
+            Mood
+        </mat-card-title>
+        <mat-card-content>
+            <mat-icon>circle</mat-icon>
+            {{ tempLevel }}
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="logging-card mat-elevation-z8"
+        (click)="logTemperature()">
+        <mat-card-title>
+            Notes
+        </mat-card-title>
+        <mat-card-content>
+            <mat-icon>circle</mat-icon>
+            {{ tempLevel }}
+        </mat-card-content>
+    </mat-card>
+    <!--
+        Ideas from drip
+    <button mat-raised-button color="primary">Cervical Mucus</button>
+    <button mat-raised-button color="primary">Cervix</button>
+    <button mat-raised-button color="primary">Sex</button>
+    <button mat-raised-button color="primary">Desire</button>
+    -->
+</div>

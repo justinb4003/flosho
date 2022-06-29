@@ -1,10 +1,17 @@
-import { Dexie } from 'dexie';
+import Dexie, { Table } from 'dexie';
 import { Injectable } from '@angular/core';
+import { BleedingDialogComponent } from '../components/dialogs/bleeding-dialog/bleeding-dialog.component';
+
+export interface Bleeding {
+  date_key: number,
+  level: string,
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class DbService extends Dexie {
+  public bleeding!: Table<Bleeding, number>;
 
   constructor() {
     super('floshodb');
@@ -16,5 +23,13 @@ export class DbService extends Dexie {
     this.open()
       .then(() => console.log('Local IndexDB opened'))
       .catch((err) => console.error('Unable to open local db', err));
-   }
+  }
+
+  public getBleeding(dateKey: number): Promise<Bleeding | undefined> {
+    return this.bleeding.get(dateKey);
+  }
+
+  public updateBleeding(bleeding: Bleeding): Promise<number> {
+    return this.bleeding.put(bleeding);
+  }
 }

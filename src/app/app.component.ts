@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'flosho';
 
   constructor(
-    dbService: DbService,
+    private dbService: DbService,
   ) {}
 
   ngOnInit(): void {
