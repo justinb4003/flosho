@@ -23,5 +23,13 @@ export class DbService extends Dexie {
     this.open()
       .then(() => console.log('Local IndexDB opened'))
       .catch((err) => console.error('Unable to open local db', err));
-   }
+  }
+
+  public getBleeding(dateKey: number): Promise<Bleeding | undefined> {
+    return this.bleeding.get(dateKey);
+  }
+
+  public updateBleeding(bleeding: Bleeding): Promise<number> {
+    return this.bleeding.put(bleeding);
+  }
 }

@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +33,8 @@ import { AppSettingsComponent } from './components/app-settings/app-settings.com
     MatButtonModule,
     MatDialogModule,
     MatRadioModule,
+    MatIconModule,
+    MatCardModule,
     BrowserAnimationsModule,
   ],
   providers: [],
