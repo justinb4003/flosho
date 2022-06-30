@@ -1,5 +1,10 @@
 # Flosho
 
+Menstrual cycle tracking application that only logs data to local storage. Encryption planned but not currently implemented. This is not intended to be a ground breaking application, rather just another implementation of [Drip](https://bloodyhealth.gitlab.io/) but as an Angular PWA so it can be run on iOS without any fuss.
+
+Licensing under GPL 3.0 because Drip is and if I copy a single line of code from them I want to be compliant and they're free to copy from here.
+
+# Stock Angular instructions below
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
 ## Development server
